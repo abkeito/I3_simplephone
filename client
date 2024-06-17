@@ -1,0 +1,4 @@
+#! /bin/bash
+server="127.0.0.1"
+port="50001"
+rec -t raw -b 16 -c 1 -e un -r 44100 - | ./phone1 $server $port | play -t raw -b 16 -c  1 -e un -r 44100 -
